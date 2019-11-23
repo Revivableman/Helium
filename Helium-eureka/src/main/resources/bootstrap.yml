@@ -1,0 +1,43 @@
+#spring:
+#  application:
+#    name: helium-eureka
+#  profiles: server1
+#server:
+#  port: 8000
+#eureka:
+#  instance:
+#    hostname: localhost
+#    prefer-ip-address: false
+#  client:
+#    service-url:
+#      defaultZone: http://${eureka.instance.hostname}:8001/eureka,http://${eureka.instance.hostname}:8002/eureka
+#
+#---
+#spring:
+#  application:
+#    name: helium-eureka
+#  profiles: server2
+#server:
+#  port: 8001
+#eureka:
+#  instance:
+#    hostname: localhost
+#    prefer-ip-address: false
+#  client:
+#    service-url:
+#      defaultZone: http://${eureka.instance.hostname}:8000/eureka,http://${eureka.instance.hostname}:8002/eureka
+#
+#---
+#spring:
+#  application:
+#    name: helium-eureka
+#  profiles: server3
+#server:
+#  port: 8002
+#eureka:
+#  instance:
+#    hostname: localhost
+#    prefer-ip-address: false
+#  client:
+#    service-url:
+#      defaultZone: http://${eureka.instance.hostname}:8000/eureka,http://${eureka.instance.hostname}:8001/eureka

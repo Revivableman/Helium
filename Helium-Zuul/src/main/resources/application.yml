@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: helium-zuul
+
+server:
+  port: 9000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+
+zuul:
+  prefix: /revivable
+  routes:
+    course:
+      path: /course/**
+      serviceId: course
+      strip-prefix: false
+    user:
+      path: /user/**
+      serviceId: user
+      strip-prefix: false
